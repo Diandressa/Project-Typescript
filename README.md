@@ -88,8 +88,19 @@ Roda na porta 3000
             "noEmitOnError": true,
             "noImplicitAny": true
         },
-        "include": ["app/**/*"]
+        "include": ["app/**/*"],
+        "exclude": ["node_modules", "dist"]
     }
+
+#### Criar pastas
+
+Cria a pasta dist e a pasta app na raiz.
+
+Em dist ficaram os arquivos js compilados e em app os arquivos ts.
+
+Em dist:
+* cria as pastas: css e js. Dentro de js cria as pastas models e controllers e o arquivo app.js
+* cria o arquivo index.html
 
 #### npm run watch
 
