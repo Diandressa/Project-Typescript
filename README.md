@@ -22,26 +22,34 @@ No terminal, precisamos baixar os módulos da aplicação:
 
 #### package.json
 
-    {
-        "name": "Application Typescript",
-        "version": "1.0.0",
-        "description": "",
-        "main": "index.js",
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1",
-            "server": "lite-server --baseDir=dist",
-            "start": "concurrently \"npm run watch\" \"npm run server\"",
-            "compile": "tsc",
-            "watch": "tsc -w"
-        },
-        "author": "Andressa Nicolau",
-        "license": "ISC",
-        "devDependencies": {
-            "concurrently": "^6.0.0",
-            "lite-server": "^2.6.1",
-            "typescript": "^4.2.2"
-        }
+{
+    "name": "Application Typescript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "lite-server --baseDir=dist",
+        "start": "concurrently \"npm run watch\" \"npm run server\"",
+        "compile": "tsc",
+        "watch": "tsc -w"
+    },
+    "author": "Andressa Nicolau",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^7.0.0",
+        "lite-server": "^2.7.0",
+        "typescript": "^5.3.3"  
     }
+}
+
+Acrescentar no arquivo:
+```
+"server": "lite-server --baseDir=dist",
+"start": "concurrently \"npm run watch\" \"npm run server\"",
+"compile": "tsc",
+"watch": "tsc -w"
+```
 
 ### Dist/ npm run serve
 
@@ -81,7 +89,7 @@ Monitora os arquivos para que assim que tiver alguma alteração ele compile. Pr
 
 #### npm run start
 
-> O problema que enquanto esse comando está rodando não consigo rodar o npm run server para rodar o servidor web: Em package.json, a linha `"start": "concurrently \"npm run watch\" \"npm run server\"",` e `"concurrently": "^6.0.0",` permite rodar dois comando ao mesmo tempo. 
+O problema que enquanto esse comando está rodando não consigo rodar o npm run server para rodar o servidor web: Em package.json, a linha `"start": "concurrently \"npm run watch\" \"npm run server\"",` e `"concurrently": "^6.0.0",` permite rodar dois comando ao mesmo tempo. 
 
 Para iniciar usamos o comando: `npm run start`
 

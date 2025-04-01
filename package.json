@@ -5,9 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "lite-server --baseDir=dist"
+    "server": "lite-server --baseDir=dist",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "compile": "tsc",
+    "watch": "tsc -w"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Andressa Nicolau",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "lite-server": "^2.7.0",
+    "typescript": "^5.3.3"  
+  }
 }
