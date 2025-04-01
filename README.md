@@ -16,21 +16,24 @@ Crie o arquivo package.json
 
 `npm init -y`
 
-No terminal, precisamos baixar os módulos da aplicação:
-
-`npm install`
-
 Criar o tsconfig
 
-`tsc --init`
+`tsc --init` ou `npx tsc --init`
 
-#### Instalar o compilador Typescript
+
+#### Instalar Typescript
+
+No terminal, precisamos baixar os módulos da aplicação:
 
 `npm install typescript@5.3.3 --save-dev`
 
 ou instalar a última versão disponível:
 
 `npm install typescript@latest --save-dev`
+
+ou
+
+`npm install typescript --save-dev`
 
 >Após esse comando os módulos são instalados
 
@@ -49,14 +52,13 @@ ou instalar a última versão disponível:
     "watch": "tsc -w"
   },
   "keywords": [],
-  "author": "Andressa Nicolau",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "lite-server": "^2.6.1",
-    "typescript": "^5.3.3"  
+    "typescript": "^5.8.2"
   }
 }
+
 ```
 
 Acrescentar no arquivo:
@@ -66,6 +68,14 @@ Acrescentar no arquivo:
 "compile": "tsc",
 "watch": "tsc -w"
 ```
+
+### Instalar o concurrently
+
+`npm install concurrently --save-dev`
+
+### Instalar o lite-server
+
+`npm install lite-server --save-dev`
 
 ### Dist/ npm run serve
 
@@ -81,16 +91,27 @@ Roda na porta 3000
 
 #### tscongif.json
 
-    {
-        "compilerOptions": {
-            "outDir": "dist/js",
-            "target": "ES6",
-            "noEmitOnError": true,
-            "noImplicitAny": true
-        },
-        "include": ["app/**/*"],
-        "exclude": ["node_modules", "dist"]
-    }
+```
+{
+  "compilerOptions": {
+    "target": "ES6", // Compilar para ES6
+    "module": "commonjs", // Usar CommonJS como o sistema de módulos
+    "strict": true, // Ativar todas as opções de verificação de tipo estritas
+    "esModuleInterop": true, // Habilitar interoperação com módulos ES
+    "outDir": "./dist/js", // Diretório de saída para arquivos compilados
+    "rootDir": "./app", // Diretório raiz dos arquivos de código fonte
+    "noEmitOnError": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "app/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+```
 
 #### Criar pastas
 
