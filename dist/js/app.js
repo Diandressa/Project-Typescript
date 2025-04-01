@@ -1,2 +1,2 @@
 "use strict";
-alert('ok');
+console.log('teste');
