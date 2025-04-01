@@ -12,6 +12,10 @@ Um projeto desenvolvido por mim utilizando Typescript na prática
 
 #### Iniciar projeto
 
+Crie o arquivo package.json
+
+`npm init -y`
+
 No terminal, precisamos baixar os módulos da aplicação:
 
 `npm install`
