@@ -20,6 +20,16 @@ No terminal, precisamos baixar os módulos da aplicação:
 
 `npm install`
 
+#### Instalar o compilador Typescript
+
+`npm install typescript@versao --save-dev`
+
+ou instalar a última versão disponível:
+
+`npm install typescript@latest --save-dev`
+
+>Após esse comando os módulos são instalados
+
 #### package.json
 ```
 {
@@ -39,7 +49,7 @@ No terminal, precisamos baixar os módulos da aplicação:
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "lite-server": "^2.7.0",
+    "lite-server": "^2.6.1",
     "typescript": "^5.3.3"  
   }
 }
@@ -64,10 +74,6 @@ Para abri o projeto no navegador usamos o comando
 `npm run server`
 
 Roda na porta 3000
-
-#### Instalar o compilador Typescript
-
-`npm install typescript@versao --save-dev`
 
 #### tscongif.json
 
