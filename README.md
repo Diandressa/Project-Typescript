@@ -21,27 +21,29 @@ No terminal, precisamos baixar os módulos da aplicação:
 `npm install`
 
 #### package.json
-
+```
 {
-    "name": "Application Typescript",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "server": "lite-server --baseDir=dist",
-        "start": "concurrently \"npm run watch\" \"npm run server\"",
-        "compile": "tsc",
-        "watch": "tsc -w"
-    },
-    "author": "Andressa Nicolau",
-    "license": "ISC",
-    "devDependencies": {
-        "concurrently": "^7.0.0",
-        "lite-server": "^2.7.0",
-        "typescript": "^5.3.3"  
-    }
+  "name": "project-typescript",
+  "version": "1.0.0",
+  "description": "Um projeto desenvolvido por mim utilizando Typescript na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server --baseDir=dist",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Andressa Nicolau",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "lite-server": "^2.7.0",
+    "typescript": "^5.3.3"  
+  }
 }
+```
 
 Acrescentar no arquivo:
 ```
