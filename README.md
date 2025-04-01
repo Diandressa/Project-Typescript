@@ -20,11 +20,34 @@ No terminal, precisamos baixar os módulos da aplicação:
 
 `npm install`
 
+#### package.json
+
+    {
+        "name": "Application Typescript",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "server": "lite-server --baseDir=dist",
+            "start": "concurrently \"npm run watch\" \"npm run server\"",
+            "compile": "tsc",
+            "watch": "tsc -w"
+        },
+        "author": "Andressa Nicolau",
+        "license": "ISC",
+        "devDependencies": {
+            "concurrently": "^6.0.0",
+            "lite-server": "^2.6.1",
+            "typescript": "^4.2.2"
+        }
+    }
+
 ### Dist/ npm run serve
 
 Tudo que está dentro da pasta dist vai ser compartilhado com nosso navegador.
 Precisamos compartilhar a pasta dist com o navegador dentro de package.json.
-Em package.json podemos ver a pasta está dist sendo compartilhada: "server": "lite-server --baseDir=dist".
+Em package.json podemos ver a pasta dist sendo compartilhada: "server": "lite-server --baseDir=dist".
 A pasta dist é a raiz do projeto 
 
 Para abri o projeto no navegador usamos o comando
@@ -48,30 +71,13 @@ Roda na porta 3000
         "include": ["app/**/*"]
     }
 
-#### package.json
+#### npm run watch
 
-    {
-        "name": "alurabank",
-        "version": "1.0.0",
-        "description": "",
-        "main": "index.js",
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1",
-            "server": "lite-server --baseDir=dist",
-            "start": "concurrently \"npm run watch\" \"npm run server\"",
-            "compile": "tsc",
-            "watch": "tsc -w"
-        },
-        "author": "",
-        "license": "ISC",
-        "devDependencies": {
-            "concurrently": "^6.0.0",
-            "lite-server": "^2.6.1",
-            "typescript": "^4.2.2"
-        }
-    }
+No package.json 
 
-> "watch": "tsc -w" -> Monitora os arquivos para que assim que tiver alguma alteração ele compile. Preciso ativar ele com o comando `npm run watch`
+`"watch": "tsc -w"`
+
+Monitora os arquivos para que assim que tiver alguma alteração ele compile. Preciso ativar ele com o comando `npm run watch`
 
 #### npm run start
 
