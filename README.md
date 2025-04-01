@@ -20,6 +20,10 @@ No terminal, precisamos baixar os módulos da aplicação:
 
 `npm install`
 
+Criar o tsconfig
+
+`tsc --init`
+
 #### Instalar o compilador Typescript
 
 `npm install typescript@5.3.3 --save-dev`
