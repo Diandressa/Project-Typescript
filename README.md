@@ -22,7 +22,7 @@ No terminal, precisamos baixar os módulos da aplicação:
 
 #### Instalar o compilador Typescript
 
-`npm install typescript@versao --save-dev`
+`npm install typescript@5.3.3 --save-dev`
 
 ou instalar a última versão disponível:
 

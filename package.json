@@ -16,6 +16,6 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "lite-server": "^2.6.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.3.3"
   }
 }
