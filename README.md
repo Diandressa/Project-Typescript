@@ -8,7 +8,13 @@ Um projeto desenvolvido por mim utilizando Typescript na prática
     *nodeJS
     *Vscode
 
-### Configurações inicias
+### Para rodar o projeto
+
+Abra o terminal no VsCode ou Git Bash:
+
+`npm run start` 
+
+### Configurações inicias para criar um projeto em Typescript
 
 #### Iniciar projeto
 
