@@ -108,7 +108,8 @@ Roda na porta 3000
 {
   "compilerOptions": {
     "target": "ES6", // Compilar para ES6
-    "module": "commonjs", // Usar CommonJS como o sistema de módulos
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true, // Ativar todas as opções de verificação de tipo estritas
     "esModuleInterop": true, // Habilitar interoperação com módulos ES
     "outDir": "./dist/js", // Diretório de saída para arquivos compilados
