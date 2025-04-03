@@ -1,11 +1,11 @@
-import { Lista } from "../models/lista.js";
 export class ListaController {
     constructor() {
-        this.data = document.getElementById("#data");
-        this.nome = document.querySelector("#nome");
+        this.dataInput = document.querySelector("#data");
+        this.nomeInput = document.querySelector("#nome");
     }
     criarLista() {
-        console.log(new Lista(new Date(), "Andressa"));
-        return new Lista(new Date(), "Andressa");
+        const data = new Date(this.dataInput.value).toLocaleDateString('pt-BR');
+        console.log(data);
+        console.log(this.nomeInput.value);
     }
 }
