@@ -7,11 +7,11 @@ export class Lista {
         this._nome = nome;
     }
 
-    get data():Date{
-        return this._data;
+    get getData():Date{
+        return new Date(this._data)
     }
 
-    get nome():string{
+    get getNome():string{
         return this._nome;
     }
 }

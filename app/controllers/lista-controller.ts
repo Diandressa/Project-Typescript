@@ -1,17 +1,18 @@
 import { Lista } from "../models/lista.js";
 
 export class ListaController {
-    private inputData:Date 
-    private inputNome:string
+    data:HTMLInputElement
+    nome:HTMLInputElement
 
-    constructor(inputData:Date, inputNome:string){
-        this.inputData = inputData
-        this.inputNome = inputNome
+    constructor(){
+        this.data = document.getElementById("#data");
+        this.nome = document.querySelector("#nome");
     }
 
-    criarLista():void{
-        console.log(this.inputData)
-        console.log(this.inputNome)
+    criarLista(){
+        console.log(this.data.value)
+        console.log(new Lista(new Date(), "Andressa"))
+        return new Lista(new Date(), "Andressa")
     }
 
 }
