@@ -1,0 +1,15 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: pink;
+}
+
+.modal-body h2 {
+  padding-top: 2rem;
+}/*# sourceMappingURL=style.css.map */

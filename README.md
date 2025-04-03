@@ -7,12 +7,19 @@ Um projeto desenvolvido por mim utilizando Typescript na prática
 
     *nodeJS
     *Vscode
+    *Extensão: Live Sass Compiler
 
 ### Para rodar o projeto
 
 Abra o terminal no VsCode ou Git Bash:
 
 `npm run start` 
+
+Adicione a extensão no Vscode
+
+`Live Sass Compiler`
+
+Clique em "Watch Sass" na parte inferior direita no VScode
 
 ### Configurações inicias para criar um projeto em Typescript
 
