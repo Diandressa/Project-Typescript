@@ -56,6 +56,16 @@ h1{
     }
 }
 
+form{
+    .form-label.invalid {
+        color: #dc3545; 
+        font-weight: bold;
+        &::after{
+            content: ' (obrigatório)';
+        }
+    }
+}
+
 // .header {
 //     @extend .common-background;
 //   }
