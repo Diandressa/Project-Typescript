@@ -1,9 +1,11 @@
 import { Lista } from "../models/lista.js";
+import { Listas } from "../models/listas.js";
 
 export class ListaController {
     dataInput:HTMLInputElement
     nomeInput:HTMLInputElement
     horaInput:HTMLInputElement
+    private listasArray = new Listas;
 
     constructor(){
         this.dataInput = document.querySelector("#data") as HTMLInputElement;
@@ -17,7 +19,11 @@ export class ListaController {
         console.log(this.horaInput.value)
         console.log(this.nomeInput.value)
 
+        this.listasArray.adiciona()
+
         this.requiredForm(this.nomeInput.value)
+
+        return new Lista(data, this.horaInput.value,this.nomeInput.value)
     }
 
     requiredForm(nome: string):void{
