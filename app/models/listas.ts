@@ -3,9 +3,9 @@ import { Lista } from "./lista";
 export class Listas {
     private listas:Lista[] = [];
 
-    adiciona(listas:Lista){
+    adiciona(){
         console.log("adicionou")
     }
 }
 
-//const listasArray = new Listas();
+const listasArray = new Listas();

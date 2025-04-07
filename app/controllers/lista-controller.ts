@@ -13,8 +13,8 @@ export class ListaController {
         this.horaInput = document.querySelector("#hora") as HTMLInputElement;
     }
 
-    criarLista():void{
-        const data = new Date(this.dataInput.value + 'T00:00:00').toLocaleDateString('pt-BR', {timeZone: 'America/Sao_Paulo'});
+    criarLista():Lista{
+        const data = new Date(this.dataInput.value + 'T00:00:00');
         console.log(data)
         console.log(this.horaInput.value)
         console.log(this.nomeInput.value)
