@@ -13,17 +13,17 @@ export class ListaController {
         this.horaInput = document.querySelector("#hora") as HTMLInputElement;
     }
 
-    criarLista():Lista{
+    criarLista():void{
         const data = new Date(this.dataInput.value + 'T00:00:00');
         console.log(data)
         console.log(this.horaInput.value)
         console.log(this.nomeInput.value)
 
-        this.listasArray.adiciona()
-
         this.requiredForm(this.nomeInput.value)
 
-        return new Lista(data, this.horaInput.value,this.nomeInput.value)
+        const instanciaLista = new Lista(data,this.nomeInput.value, this.horaInput.value)
+
+        this.listasArray.adiciona(instanciaLista)
     }
 
     requiredForm(nome: string):void{
