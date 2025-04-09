@@ -9,8 +9,8 @@ export class ListasView {
 
     template(listasArray:Listas):string{
         return `
-            <table class="table table-hover table-bordered">
-                <thead>
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="text-bold">
                     <tr>
                         <th>Lista</th>
                         <th>Data</th>
@@ -20,11 +20,13 @@ export class ListasView {
                 <tbody>
                     ${listasArray.lerLista().map(item => {
                         return `
-                        <td>${item.getNome}</td>
-                        <td>${new Intl.DateTimeFormat().format(item.getData)}</td>
-                        <td>${item.getHora}</td>
+                        <tr>
+                            <td>${item.getNome}</td>
+                            <td>${new Intl.DateTimeFormat().format(item.getData)}</td>
+                            <td>${item.getHora}</td>
+                        </tr>
                         `
-                    })}
+                    }).join('')}
                 </tbody>
             </table>
         `
