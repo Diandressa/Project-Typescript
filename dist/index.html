@@ -23,7 +23,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h1><span class="bg-antiquewhite"><i class="bi bi-cart3"></i></span> Lista de Compras</h1>
+                    <!-- <h1><span class="bg-antiquewhite"><i class="bi bi-cart3"></i></span> Lista de Compras</h1> -->
 
                     <!-- Button trigger modal -->
                     <div>
@@ -49,8 +49,8 @@
                             <div class="my-4">
                                 <div class="d-flex justify-content-center flex-md-row flex-column gap-3 px-3 px-md-0">
                                     <div class="form-group">
-                                        <label for="nome" class="form-label">Nome da Lista</label>
-                                        <input type="text" id="nome" class="form-control" autofocus placeholder="Compra básica">
+                                        <label for="nome" class="form-label">*Nome da Lista</label>
+                                        <input type="text" id="nome" class="form-control" autofocus placeholder="Compra básica" required>
                                     </div>
 
                                     <div class="form-group">
@@ -70,6 +70,7 @@
                             </div>
                         </form>
                     </div>
+                    <div class="text-center pt-3" id="listasView"></div>
                 </div>
             </div>
         </div>
