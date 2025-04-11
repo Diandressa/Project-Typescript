@@ -1,13 +1,11 @@
+import { ItemController } from "./controller/item-controller.js";
 
-import { ListaController } from "./controllers/lista-controller.js";
-
-const controller = new ListaController();
-
+const itemController = new ItemController();
 const form = document.querySelector('form')!;
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event)=>{
     event.preventDefault();
-    controller.criarLista()
+    itemController.adiciona();
 })
 
 
