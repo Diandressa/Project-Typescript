@@ -18,4 +18,7 @@ export class Item {
     get getValor(){
         return this._valor;
     }
+    get getTotal(){
+        return this._valor * this._quantidade;
+    }
 }
