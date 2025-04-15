@@ -10,23 +10,31 @@ export class ItensView {
                         <th>Item</th>
                         <th>Quantidade</th>
                         <th>Valor</th>
+                        <th>Total item</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
                     ${model.lista().map(item => {
             return `
                         <tr>
-                            <th>${item.getItem}</th>
-                            <td>${item.getQuantidade}</td>
-                            <td>${item.getValor}</td>
+                            <th>
+                                <input type="text" class="form-control tablevalue" value=${item.getItem} >
+                            </th>
+                            <td>
+                                <input type="text" class="form-control tablevalue" value=${item.getQuantidade} > 
+                            </td>
+                            <td>
+                                <input type="text" class="form-control tablevalue" value=${item.getValor} >
+                            </td>
+                            <td>${item.getTotal}</td>
                         </tr>
                         `;
-        })}
+        }).join('')}
                 </tbody>
                 <tfoot>
                     <tr>
-                    <th colspan="2">Total</th>
-                    <td class="table-active">${this.update}</td>
+                    <th colspan="3">Total</th>
+                    <td class="table-active"></td>
                     </tr>
                 </tfoot>
             </table>

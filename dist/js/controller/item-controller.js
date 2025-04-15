@@ -13,8 +13,8 @@ export class ItemController {
     adiciona() {
         const quantidade = parseInt(this._quantidade.value);
         const valor = parseFloat(this._valor.value);
-        const items = new Item(this._item.value, quantidade, valor);
-        this.itens.adiciona(items);
+        const itens = new Item(this._item.value, quantidade, valor);
+        this.itens.adiciona(itens);
         this.itensView.update(this.itens);
     }
 }
