@@ -17,6 +17,9 @@ export class ItemController {
         const valor = parseFloat(this._valor.value);
         const itens = new Item(this._item.value, quantidade, valor);
         this.itens.adiciona(itens);
+        this.atualizaView();
+    }
+    atualizaView() {
         this.itensView.update(this.itens);
         this.mensagensView.update("Adicionado com sucesso");
     }

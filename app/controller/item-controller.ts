@@ -17,15 +17,18 @@ export class ItemController {
         this.itensView.update(this.itens)
     }
 
-    adiciona():void{
+    public adiciona():void{
         const quantidade = parseInt(this._quantidade.value);
         const valor = parseFloat(this._valor.value);
 
         const itens = new Item(this._item.value, quantidade, valor);
 
-        this.itens.adiciona(itens)
+        this.itens.adiciona(itens);
+        this.atualizaView();
+    }
+    
+    private atualizaView():void{
         this.itensView.update(this.itens)
         this.mensagensView.update("Adicionado com sucesso")
     }
-   
 }
