@@ -1,7 +1,5 @@
-export class ItensView {
-    constructor(seletor) {
-        this.elemento = document.querySelector(seletor);
-    }
+import { View } from "./view.js";
+export class ItensView extends View {
     template(model) {
         return `
             <table class="table table-striped table-hover table-bordered border-secondary">

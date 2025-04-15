@@ -1,12 +1,7 @@
-import { Item } from "../model/item.js";
 import { Itens } from "../model/itens.js";
+import { View } from "./view.js";
 
-export class ItensView{
-    protected elemento:HTMLElement;
-
-    constructor(seletor:string){
-        this.elemento = document.querySelector(seletor)!;
-    }
+export class ItensView extends View<Itens>{
 
     protected template(model:Itens): string{
         return `

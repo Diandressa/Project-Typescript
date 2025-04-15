@@ -1,9 +1,5 @@
-export class MensagemView{
-    protected elemento:HTMLElement;
-
-    constructor(seletor:string){
-        this.elemento = document.querySelector(seletor)!;
-    }
+import { View } from "./view.js"
+export class MensagemView extends View<string>{
 
     public template(model:string):string{
         return `
@@ -14,7 +10,7 @@ export class MensagemView{
     public update(model:string):void{
         this.elemento.innerHTML = this.template(model)
         this.elemento.classList.remove('fade-out')
-        
+
         setTimeout(() => {
             this.elemento.classList.add('fade-out')
 
