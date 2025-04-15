@@ -40,7 +40,7 @@ export class ItensView{
                 <tfoot>
                     <tr>
                     <th colspan="3">Total</th>
-                    <td class="table-active"></td>
+                    <td class="table-active">${model.somaAcumulado}</td>
                     </tr>
                 </tfoot>
             </table>
