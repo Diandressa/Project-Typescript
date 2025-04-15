@@ -50,6 +50,11 @@ h1 {
   padding-top: 2rem;
 }
 
+.fade-out {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
 form .form-label.invalid {
   color: #dc3545;
   font-weight: bold;

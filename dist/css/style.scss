@@ -56,6 +56,11 @@ h1{
     }
 }
 
+.fade-out{
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
 form{
     .form-label.invalid {
         color: #dc3545; 
