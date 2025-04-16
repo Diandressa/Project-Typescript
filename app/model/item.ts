@@ -18,7 +18,20 @@ export class Item {
     get getValor(){
         return this._valor;
     }
+
     get getTotal(){
         return this._valor * this._quantidade;
+    }
+
+    set setItem(novoItem:string){
+        this._item = novoItem;
+    }
+
+    set setQuantidade(novoValor:number){
+        this._quantidade = novoValor;
+    }
+
+    set setValor(novoQuantidade:number){
+        this._valor = novoQuantidade;
     }
 }

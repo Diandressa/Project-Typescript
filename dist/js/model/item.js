@@ -16,4 +16,13 @@ export class Item {
     get getTotal() {
         return this._valor * this._quantidade;
     }
+    set setItem(novoItem) {
+        this._item = novoItem;
+    }
+    set setQuantidade(novoValor) {
+        this._quantidade = novoValor;
+    }
+    set setValor(novoQuantidade) {
+        this._valor = novoQuantidade;
+    }
 }

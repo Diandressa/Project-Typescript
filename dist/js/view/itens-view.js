@@ -1,6 +1,6 @@
 import { View } from "./view.js";
 export class ItensView extends View {
-    template(model) {
+    template(model, total) {
         return `
             <table class="table table-striped table-hover table-bordered border-secondary">
                 <thead class="table-dark">
@@ -16,13 +16,13 @@ export class ItensView extends View {
             return `
                         <tr>
                             <th>
-                                <input type="text" class="form-control tablevalue" value=${item.getItem} >
+                                <input type="text" class="form-control item setvalor" value=${item.getItem} >
                             </th>
                             <td>
-                                <input type="text" class="form-control tablevalue" value=${item.getQuantidade} > 
+                                <input type="number" class="form-control quantidade setvalor" value=${item.getQuantidade} > 
                             </td>
                             <td>
-                                <input type="text" class="form-control tablevalue" value=${item.getValor} >
+                                <input type="number" class="form-control valor setvalor" value=${item.getValor} >
                             </td>
                             <td>${item.getTotal}</td>
                         </tr>
@@ -41,5 +41,17 @@ export class ItensView extends View {
     }
     update(model) {
         this.elemento.innerHTML = this.template(model);
+    }
+    valorItem(item, model) {
+        const quantidade = document.querySelector('.quantidade');
+        quantidade.addEventListener('keyup', (event) => {
+            item.setQuantidade = Number(quantidade.value);
+            console.log(item.getTotal);
+        });
+        const valor = document.querySelector('.valor');
+        valor.addEventListener('keyup', (event) => {
+            item.setValor = Number(valor.value);
+            console.log(item.getTotal);
+        });
     }
 }

@@ -12,15 +12,20 @@ export class ItemController {
         this._valor = document.querySelector('#valor');
         this.itensView.update(this.itens);
     }
-    adiciona() {
+    criarItem() {
         const quantidade = parseInt(this._quantidade.value);
         const valor = parseFloat(this._valor.value);
         const itens = new Item(this._item.value, quantidade, valor);
-        this.itens.adiciona(itens);
-        this.atualizaView();
+        this.adiciona(itens);
+        this.atualizaView(itens);
     }
-    atualizaView() {
+    adiciona(itens) {
+        this.itens.adiciona(itens);
+        this.atualizaView(itens);
+    }
+    atualizaView(itens) {
         this.itensView.update(this.itens);
+        this.itensView.valorItem(itens, this.itens);
         this.mensagensView.update("Adicionado com sucesso");
     }
 }

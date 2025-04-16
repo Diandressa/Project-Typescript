@@ -1,9 +1,11 @@
+import { ItemController } from "../controller/item-controller.js";
+import { Item } from "../model/item.js";
 import { Itens } from "../model/itens.js";
 import { View } from "./view.js";
 
 export class ItensView extends View<Itens>{
 
-    protected template(model:Itens): string{
+    protected template(model:Itens, total?:number): string{
         return `
             <table class="table table-striped table-hover table-bordered border-secondary">
                 <thead class="table-dark">
@@ -19,13 +21,13 @@ export class ItensView extends View<Itens>{
                         return `
                         <tr>
                             <th>
-                                <input type="text" class="form-control tablevalue" value=${item.getItem} >
+                                <input type="text" class="form-control item setvalor" value=${item.getItem} >
                             </th>
                             <td>
-                                <input type="text" class="form-control tablevalue" value=${item.getQuantidade} > 
+                                <input type="number" class="form-control quantidade setvalor" value=${item.getQuantidade} > 
                             </td>
                             <td>
-                                <input type="text" class="form-control tablevalue" value=${item.getValor} >
+                                <input type="number" class="form-control valor setvalor" value=${item.getValor} >
                             </td>
                             <td>${item.getTotal}</td>
                         </tr>
@@ -45,5 +47,21 @@ export class ItensView extends View<Itens>{
 
     public update(model:Itens):void{
         this.elemento.innerHTML = this.template(model)
+    }  
+
+    public valorItem(item:Item, model:Itens):void{
+        const quantidade = document.querySelector('.quantidade') as HTMLInputElement;
+        quantidade.addEventListener('keyup', (event) => {
+            item.setQuantidade = Number(quantidade.value);
+            console.log(item.getTotal)
+        })
+
+        const valor = document.querySelector('.valor') as HTMLInputElement;
+        valor.addEventListener('keyup', (event) => {
+            item.setValor = Number(valor.value);
+            console.log(item.getTotal)
+        })
+        
     }
+    
 }
