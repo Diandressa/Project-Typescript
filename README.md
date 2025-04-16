@@ -115,7 +115,8 @@ Roda na porta 3000
     "outDir": "./dist/js", // Diretório de saída para arquivos compilados
     "rootDir": "./app", // Diretório raiz dos arquivos de código fonte
     "noEmitOnError": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "strictNullChecks": true
   },
   "include": [
     "app/**/*"
