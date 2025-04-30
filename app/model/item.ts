@@ -2,13 +2,18 @@ export class Item {
     private _item:string;
     private _quantidade:number;
     private _valor:number;
+    private _id:number;
 
-    constructor(item:string, quantidade:number, valor:number){
+    constructor(item:string, quantidade:number, valor:number, id:number){
         this._item = item;
         this._quantidade = quantidade;
-        this._valor = valor
+        this._valor = valor;
+        this._id = id;
     }
 
+    get getId(){
+        return this._id;
+    }
     get getItem(){
         return this._item;
     }
@@ -21,17 +26,5 @@ export class Item {
 
     get getTotal(){
         return this._valor * this._quantidade;
-    }
-
-    set setItem(novoItem:string){
-        this._item = novoItem;
-    }
-
-    set setQuantidade(novoValor:number){
-        this._quantidade = novoValor;
-    }
-
-    set setValor(novoQuantidade:number){
-        this._valor = novoQuantidade;
     }
 }

@@ -1,6 +1,6 @@
 import { View } from "./view.js";
 export class ItensView extends View {
-    template(model, total) {
+    template(model) {
         return `
             <table class="table table-striped table-hover table-bordered border-secondary">
                 <thead class="table-dark">
@@ -9,6 +9,7 @@ export class ItensView extends View {
                         <th>Quantidade</th>
                         <th>Valor</th>
                         <th>Total item</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -16,15 +17,18 @@ export class ItensView extends View {
             return `
                         <tr>
                             <th>
-                                <input type="text" class="form-control item setvalor" value=${item.getItem} >
+                                ${item.getItem} 
                             </th>
                             <td>
-                                <input type="number" class="form-control quantidade setvalor" value=${item.getQuantidade} > 
+                                ${item.getQuantidade} 
                             </td>
                             <td>
-                                <input type="number" class="form-control valor setvalor" value=${item.getValor} >
+                                ${item.getValor} 
                             </td>
                             <td>${item.getTotal}</td>
+                            <td>
+                                <button class="btn btn-delete" data-id="${item.getId}"><i class="bi bi-trash3-fill text-danger"></i></button>
+                            </td>
                         </tr>
                         `;
         }).join('')}
@@ -41,17 +45,5 @@ export class ItensView extends View {
     }
     update(model) {
         this.elemento.innerHTML = this.template(model);
-    }
-    valorItem(item, model) {
-        const quantidade = document.querySelector('.quantidade');
-        quantidade.addEventListener('keyup', (event) => {
-            item.setQuantidade = Number(quantidade.value);
-            console.log(item.getTotal);
-        });
-        const valor = document.querySelector('.valor');
-        valor.addEventListener('keyup', (event) => {
-            item.setValor = Number(valor.value);
-            console.log(item.getTotal);
-        });
     }
 }

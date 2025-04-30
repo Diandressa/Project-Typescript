@@ -7,6 +7,7 @@ export class ItemController {
         this.itens = new Itens();
         this.itensView = new ItensView('#listasView');
         this.mensagensView = new MensagemView('.alert');
+        this.contador = 0;
         this._item = document.querySelector('#item');
         this._quantidade = document.querySelector('#quantidade');
         this._valor = document.querySelector('#valor');
@@ -15,17 +16,31 @@ export class ItemController {
     criarItem() {
         const quantidade = parseInt(this._quantidade.value);
         const valor = parseFloat(this._valor.value);
-        const itens = new Item(this._item.value, quantidade, valor);
-        this.adiciona(itens);
-        this.atualizaView(itens);
+        let id = this.contador++;
+        const item = new Item(this._item.value, quantidade, valor, id);
+        this.adiciona(item);
     }
-    adiciona(itens) {
-        this.itens.adiciona(itens);
-        this.atualizaView(itens);
+    adiciona(item) {
+        this.itens.adiciona(item);
+        this.atualizaView(item);
+    }
+    remove() {
+        const btnDelete = document.querySelectorAll('.btn-delete');
+        btnDelete.forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                const buttonClicado = event.currentTarget;
+                const itemId = buttonClicado.getAttribute('data-id');
+                console.log(itemId);
+                this.itens.remove(Number(itemId));
+                this.itensView.update(this.itens);
+                this.mensagensView.update("Item removido");
+                this.atualizaView();
+            });
+        });
     }
     atualizaView(itens) {
         this.itensView.update(this.itens);
-        this.itensView.valorItem(itens, this.itens);
         this.mensagensView.update("Adicionado com sucesso");
+        this.remove();
     }
 }

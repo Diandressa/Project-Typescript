@@ -1,8 +1,12 @@
 export class Item {
-    constructor(item, quantidade, valor) {
+    constructor(item, quantidade, valor, id) {
         this._item = item;
         this._quantidade = quantidade;
         this._valor = valor;
+        this._id = id;
+    }
+    get getId() {
+        return this._id;
     }
     get getItem() {
         return this._item;
@@ -15,14 +19,5 @@ export class Item {
     }
     get getTotal() {
         return this._valor * this._quantidade;
-    }
-    set setItem(novoItem) {
-        this._item = novoItem;
-    }
-    set setQuantidade(novoValor) {
-        this._quantidade = novoValor;
-    }
-    set setValor(novoQuantidade) {
-        this._valor = novoQuantidade;
     }
 }
