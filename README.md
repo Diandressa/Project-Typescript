@@ -3,6 +3,10 @@ Um projeto desenvolvido por mim utilizando Typescript na prática
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
+## Projetos
+
+Há um novo projeto na branch feature
+
 ### Pré-requisitos
 
     *nodeJS
