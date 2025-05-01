@@ -31,6 +31,7 @@ export class ItemController {
     public adiciona(item:Item):void{
         this.itens.adiciona(item);
         this.atualizaView(item);
+        this.mensagensView.update("Adicionado com sucesso");
     }
 
     public remove():void{
@@ -52,8 +53,7 @@ export class ItemController {
     }
     
     public atualizaView(itens?:Item):void{
-        this.itensView.update(this.itens)
-        this.mensagensView.update("Adicionado com sucesso");   
+        this.itensView.update(this.itens)   
         this.remove()  
     }
 }

@@ -23,6 +23,7 @@ export class ItemController {
     adiciona(item) {
         this.itens.adiciona(item);
         this.atualizaView(item);
+        this.mensagensView.update("Adicionado com sucesso");
     }
     remove() {
         const btnDelete = document.querySelectorAll('.btn-delete');
@@ -40,7 +41,6 @@ export class ItemController {
     }
     atualizaView(itens) {
         this.itensView.update(this.itens);
-        this.mensagensView.update("Adicionado com sucesso");
         this.remove();
     }
 }

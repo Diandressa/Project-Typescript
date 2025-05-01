@@ -46,6 +46,11 @@ h1 {
   color: aliceblue;
 }
 
+.card{
+  overflow: auto;
+  max-height: 100dvh;
+}
+
 .modal-body h2 {
   padding-top: 2rem;
 }
