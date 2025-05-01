@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(31, 31, 31);
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-family: "Winky Sans", sans-serif;
+}
+
+.bg-antiquewhite{
+    background-color: antiquewhite;
+}
+
+.link-default {
+    color: hotpink;
+    background-color: antiquewhite;
+
+    &:hover{
+        background-color: rgb(240, 208, 167);
+        color: #000;
+        cursor: pointer;
+    }
+}
+
+.btn-default {
+    background-color: aqua;
+    border-radius: 5rem;
+    color: rgb(34, 34, 34);
+    padding-inline: 2rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        transform: scale(1.05);
+        background-color: hotpink;
+        color: aliceblue;
+    }
+}
+
+.modal-body {
+    h2{
+        padding-top: 2rem;
+    }
+}
+
+.fade-out{
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+form{
+    .form-label.invalid {
+        color: #dc3545; 
+        font-weight: bold;
+        &::after{
+            content: ' (obrigatório)';
+        }
+    }
+}
+
+// .header {
+//     @extend .common-background;
+//   }
+  
+//   .footer {
+//     @extend .common-background;
+//   }
