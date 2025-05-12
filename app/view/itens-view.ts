@@ -7,8 +7,8 @@ export class ItensView extends View<Itens>{
 
     protected template(model:Itens): string{
         return `
-            <table class="table table-striped table-hover table-bordered border-secondary">
-                <thead class="table-dark">
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Item</th>
                         <th>Quantidade</th>
@@ -17,7 +17,7 @@ export class ItensView extends View<Itens>{
                         <th></th>
                     </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody class="table table-group-divider table-striped-columns">
                     ${model.lista().map(item => {
                         return `
                         <tr>
@@ -39,8 +39,8 @@ export class ItensView extends View<Itens>{
                     }).join('')}
                 </tbody>
                 <tfoot>
-                    <tr>
-                    <th colspan="3">Total</th>
+                    <tr class="table-success">
+                    <th colspan="4">Total</th>
                     <td class="table-active">${model.somaAcumulado}</td>
                     </tr>
                 </tfoot>

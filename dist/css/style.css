@@ -9,13 +9,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: rgb(31, 31, 31);
+  background: url("../img/fundo.jpg") no-repeat center center;
+  background-size: cover;
   height: 100dvh;
   display: flex;
-  align-items: center;
 }
 
-h1 {
+h1, h2 {
   font-family: "Winky Sans", sans-serif;
 }
 
@@ -24,13 +24,16 @@ h1 {
 }
 
 .link-default {
-  color: hotpink;
-  background-color: antiquewhite;
+  color: rgb(184, 198, 199);
 }
 .link-default:hover {
   background-color: rgb(240, 208, 167);
   color: #000;
   cursor: pointer;
+}
+
+.form-fundo {
+  background-color: #ff4f40;
 }
 
 .btn-default {
@@ -46,17 +49,12 @@ h1 {
   color: aliceblue;
 }
 
-.card{
-  overflow: auto;
-  max-height: 100dvh;
-}
-
 .modal-body h2 {
   padding-top: 2rem;
 }
 
 .fade-out {
-  transition: all 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0;
 }
 
@@ -66,4 +64,14 @@ form .form-label.invalid {
 }
 form .form-label.invalid::after {
   content: " (obrigatório)";
+}
+
+.box-add {
+  position: fixed;
+  width: 100dvw;
+}
+
+.table-box {
+  margin-top: 22rem;
+  width: 100vw;
 }/*# sourceMappingURL=style.css.map */

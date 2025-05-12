@@ -6,7 +6,7 @@ export class Itens{
 
     public adiciona(item:Item){
         this.itens.push(item)
-        this.somaAcumulado = this.somaAcumulado + item.getTotal;
+        this.somaAcumulado = Math.round((this.somaAcumulado + item.getTotal)*100)/100;
     }
 
     public remove(id:number):void{

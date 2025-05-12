@@ -19,6 +19,10 @@ export class ItemController {
         let id = this.contador++;
         const item = new Item(this._item.value, quantidade, valor, id);
         this.adiciona(item);
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
     }
     adiciona(item) {
         this.itens.adiciona(item);

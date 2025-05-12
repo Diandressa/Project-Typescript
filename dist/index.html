@@ -19,60 +19,55 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h1><span class="bg-antiquewhite"><i class="bi bi-cart3"></i></span> Lista de Compras</h1>
+    <div>    
+        <!-- <h1><span class="bg-antiquewhite"><i class="bi bi-cart3"></i></span> Lista de Compras</h1> -->
 
-                    <!-- Button trigger modal -->
-                    <div>
-                        <a class="link-default p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <small><i class="bi bi-info-circle pe-2"></i><em>Como funciona?</em></small>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="py-4">
-                    <div class="bg-antiquewhite pt-3 rounded">
-                        <form action="#" method="get" class="form">
-                            <div class="text-center">
-                                <h2>Adicionar Item </h2>
-                                <hr>
-                            </div>
-                            <div class="my-4">
-                                <div class="d-flex justify-content-center flex-md-row flex-column gap-3 px-3 px-md-0">
-                                    <div class="form-group">
-                                        <label for="item" class="form-label">Item</label>
-                                        <input type="text" id="item" class="form-control" autofocus placeholder="Batata">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="quantidade" class="form-label">Quantidade</label>
-                                        <input type="number" min="1" step="1" id="quantidade" class="form-control" required/> 
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="valor" class="form-label">Valor</label>
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">R$</span>
-                                            <input class="form-control" type="number" id="valor" step="0.01" value="0.00" required>
-                                          </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="text-center">
-                                <button class="btn btn-success" type="submit">Adicionar</button>
-                            </div>
-                            <div class="alert text-center mt-2"></div>
-                        </form>
-                    </div>
-                    <div class="text-center pt-3" id="listasView"></div>
-                </div>
+        <div class="bg-light box-add border border-black">
+            <!-- Button trigger modal -->
+            <div class="text-center py-1">
+                <a class="link-default p-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <small><i class="bi bi-info-circle pe-2"></i><em>Como funciona?</em></small>
+                </a>
             </div>
+            <form action="#" method="get" class="form">
+                <div class="text-center">
+                    <picture>
+                        <img src="img/tomato_icon.png" alt="logo" width="40px">
+                    </picture>
+                    <h2 class="m-0 py-1">Adicionar Item </h2>
+                </div>
+                <hr class="m-0">
+
+                <div class="form-fundo pb-1 pt-3">
+                    <div class="p-2">
+                        <div class="d-flex justify-content-center gap-3">
+                            <div class="form-group">
+                                <label for="item" class="form-label text-white">Item</label>
+                                <input type="text" id="item" class="form-control" autofocus placeholder="Produto">
+                            </div>
+                            <div class="form-group">
+                                <label for="valor" class="form-label text-white">Valor</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">R$</span>
+                                    <input class="form-control" type="number" id="valor" step="0.01" required>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantidade" class="form-label text-white">Quantidade</label>
+                                <input type="number" min="1" step="1" id="quantidade" class="form-control" required/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-success rounded-0" type="submit">Adicionar</button>
+                    </div>
+                    <div class="alert text-center mt-1"></div>
+                </div>
+            </form>
         </div>
+        <div class="text-center pt-3 table-box" id="listasView"></div>
+                
     </div>
 
 

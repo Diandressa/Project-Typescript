@@ -5,7 +5,7 @@ export class Itens {
     }
     adiciona(item) {
         this.itens.push(item);
-        this.somaAcumulado = this.somaAcumulado + item.getTotal;
+        this.somaAcumulado = Math.round((this.somaAcumulado + item.getTotal) * 100) / 100;
     }
     remove(id) {
         // Encontrar o id passado na nossa lista

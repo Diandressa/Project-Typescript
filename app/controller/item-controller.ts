@@ -26,6 +26,10 @@ export class ItemController {
         const item = new Item(this._item.value, quantidade, valor, id);
 
         this.adiciona(item)
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
     }
 
     public adiciona(item:Item):void{
