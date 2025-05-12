@@ -1,5 +1,8 @@
 # Project-Typescript-
-Um projeto desenvolvido por mim utilizando Typescript na prática
+Projeto desenvolvido em Typescript.
+
+![imagem do projeto](img/tomato_icon.png)
+O código está na branch feature, para acessar projeto [Clique Aqui!](https://diandressa.github.io/Project-Typescript/docs/)
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
