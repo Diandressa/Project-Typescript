@@ -26,10 +26,23 @@ export class ItemController {
         const item = new Item(this._item.value, quantidade, valor, id);
 
         this.adiciona(item)
+        this.limparCampo()
+        this.scrollBottom()
+    }
+
+    private scrollBottom():void{
         window.scrollTo({
             top: document.body.scrollHeight,
             behavior: "smooth"
         });
+    }
+
+    private limparCampo():void{
+        this._item.value = '';
+        this._quantidade.value = '';
+        this._valor.value = '';
+
+        this._item.focus();
     }
 
     public adiciona(item:Item):void{

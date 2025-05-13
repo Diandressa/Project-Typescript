@@ -28,9 +28,9 @@ export class ItensView extends View<Itens>{
                                 ${item.getQuantidade} 
                             </td>
                             <td>
-                                ${item.getValor} 
+                                R$ ${item.getValor} 
                             </td>
-                            <td>${item.getTotal}</td>
+                            <td>R$ ${item.getTotal}</td>
                             <td>
                                 <button class="btn btn-delete" data-id="${item.getId}"><i class="bi bi-trash3-fill text-danger"></i></button>
                             </td>
@@ -40,8 +40,9 @@ export class ItensView extends View<Itens>{
                 </tbody>
                 <tfoot>
                     <tr class="table-success">
-                    <th colspan="4">Total</th>
-                    <td class="table-active">${model.somaAcumulado}</td>
+                    <th colspan="3">Total</th>
+                    <td class="table-active">R$ ${model.somaAcumulado}</td>
+                    <th></th>
                     </tr>
                 </tfoot>
             </table>
