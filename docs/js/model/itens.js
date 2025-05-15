@@ -2,10 +2,12 @@ export class Itens {
     constructor() {
         this.itens = [];
         this.somaAcumulado = 0;
+        this.acumuladoFormatado = '';
     }
     adiciona(item) {
         this.itens.push(item);
         this.somaAcumulado = Math.round((this.somaAcumulado + item.getTotal) * 100) / 100;
+        this.acumuladoFormatado = this.somaAcumulado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
     remove(id) {
         // Encontrar o id passado na nossa lista
@@ -14,6 +16,7 @@ export class Itens {
         if (itemRemovido) {
             // Subtrair o total do item removido de somaAcumulado
             this.somaAcumulado -= itemRemovido.getTotal;
+            this.acumuladoFormatado = this.somaAcumulado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             // Remover o item da lista
             this.itens = this.itens.filter(item => item.getId !== id);
         }

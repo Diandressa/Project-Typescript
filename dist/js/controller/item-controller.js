@@ -5,8 +5,8 @@ import { MensagemView } from "../view/mensagem-view.js";
 export class ItemController {
     constructor() {
         this.itens = new Itens();
-        this.itensView = new ItensView('#listasView');
-        this.mensagensView = new MensagemView('.alert');
+        this.itensView = new ItensView('#listasView', '#totalView');
+        this.mensagensView = new MensagemView('.alert', '#totalView');
         this.contador = 0;
         this._item = document.querySelector('#item');
         this._quantidade = document.querySelector('#quantidade');

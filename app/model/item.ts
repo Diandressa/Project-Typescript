@@ -21,10 +21,14 @@ export class Item {
         return this._quantidade;
     }
     get getValor(){
-        return this._valor;
+        return this._valor.toLocaleString('pt-BR',  {style:'currency', currency: 'BRL'});
     }
 
     get getTotal(){
         return this._valor * this._quantidade;
+    }
+
+    get getTotalFormatado(){
+        return (this._valor * this._quantidade).toLocaleString('pt-BR',  {style:'currency', currency: 'BRL'});
     }
 }

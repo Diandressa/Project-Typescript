@@ -23,9 +23,9 @@ export class ItensView extends View {
                                 ${item.getQuantidade} 
                             </td>
                             <td>
-                                R$ ${item.getValor} 
+                                ${item.getValor} 
                             </td>
-                            <td>R$ ${item.getTotal}</td>
+                            <td>R$ ${item.getTotalFormatado}</td>
                             <td>
                                 <button class="btn btn-delete" data-id="${item.getId}"><i class="bi bi-trash3-fill text-danger"></i></button>
                             </td>
@@ -35,16 +35,21 @@ export class ItensView extends View {
                 </tbody>
                 <tfoot>
                     <tr class="table-success">
-                    <th colspan="3">Total</th>
-                    <td class="table-active">R$ ${model.somaAcumulado}</td>
-                    <th></th>
+                    <th colspan="4">Total</th>
+                    <td class="table-active">${model.acumuladoFormatado}</td>
                     </tr>
                 </tfoot>
             </table>
                 
         `;
     }
+    total(model) {
+        return `
+            Total: ${model.acumuladoFormatado}
+        `;
+    }
     update(model) {
         this.elemento.innerHTML = this.template(model);
+        this.totalView.innerHTML = this.total(model);
     }
 }

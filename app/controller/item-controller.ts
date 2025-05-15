@@ -8,8 +8,8 @@ export class ItemController {
     private _quantidade:HTMLInputElement;
     private _valor:HTMLInputElement;
     private itens = new Itens();
-    private itensView = new ItensView('#listasView');
-    private mensagensView = new MensagemView('.alert');
+    private itensView = new ItensView('#listasView','#totalView');
+    private mensagensView = new MensagemView('.alert','#totalView');
     private contador:number = 0;
 
     constructor(){
