@@ -25,7 +25,7 @@ export class ItensView extends View {
                             <td>
                                 ${item.getValor} 
                             </td>
-                            <td>R$ ${item.getTotalFormatado}</td>
+                            <td>${item.getTotalFormatado}</td>
                             <td>
                                 <button class="btn btn-delete" data-id="${item.getId}"><i class="bi bi-trash3-fill text-danger"></i></button>
                             </td>
