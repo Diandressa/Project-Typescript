@@ -53,6 +53,11 @@ export class ItemController {
             });
         });
     }
+    recomecar() {
+        this.itens = new Itens();
+        this.itensView.update(this.itens);
+        this.mensagensView.update("Lista apagada");
+    }
     atualizaView(itens) {
         this.itensView.update(this.itens);
         this.remove();

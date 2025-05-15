@@ -68,6 +68,12 @@ export class ItemController {
             })
         })
     }
+
+    public recomecar():void{
+        this.itens = new Itens();
+        this.itensView.update(this.itens)
+        this.mensagensView.update("Lista apagada");
+    }
     
     public atualizaView(itens?:Item):void{
         this.itensView.update(this.itens)   
