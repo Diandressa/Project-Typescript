@@ -11,7 +11,7 @@ export class ItensView extends View<Itens>{
                 <thead>
                     <tr>
                         <th>Item</th>
-                        <th>Quantidade</th>
+                        <th>Quant.</th>
                         <th>Valor</th>
                         <th>Total item</th>
                         <th></th>
@@ -40,8 +40,9 @@ export class ItensView extends View<Itens>{
                 </tbody>
                 <tfoot>
                     <tr class="table-success">
-                    <th colspan="4">Total</th>
-                    <td class="table-active">${model.acumuladoFormatado}</td>
+                        <th colspan="3">Total</th>
+                        <td class="table-active">${model.acumuladoFormatado}</td>
+                        <td></td>
                     </tr>
                 </tfoot>
             </table>
